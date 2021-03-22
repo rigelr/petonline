@@ -10,7 +10,7 @@
 
             <div class="card">
               <div class="card-header bg-info">
-                <h2>Data Reservasi Hotel</h2>
+                <h2>Data History Reservasi Hotel</h2>
               </div>
               <div class="card-body">
                 
@@ -19,10 +19,10 @@
                 
                       foreach ($hewan as $v) {
 
-                 $cekhotel=$this->db->query("SELECT*FROM reservasi_hotel WHERE id_hewan ='".$v->id_hewan."' && status = '1'")->num_rows();
+                 $cekhotel=$this->db->query("SELECT*FROM reservasi_hotel WHERE id_hewan ='".$v->id_hewan."'&& status ='0'")->num_rows();
                  if($cekhotel > 0){
                    
-                  $hotel=$this->db->query("SELECT*FROM reservasi_hotel WHERE id_hewan ='".$v->id_hewan."' && status = '1'")->row();
+                  $hotel=$this->db->query("SELECT*FROM reservasi_hotel WHERE id_hewan ='".$v->id_hewan."'&& status ='0'")->row();
                       echo "
                       
                       <div class='row'>
@@ -78,7 +78,7 @@
 
             <div class="card">
               <div class="card-header bg-warning">
-                <h2>Data Reservasi Grooming</h2>
+                <h2>Data History Reservasi Grooming</h2>
               </div>
               <div class="card-body">
                 
@@ -87,10 +87,10 @@
                 
                       foreach ($hewan as $v) {
 
-                 $cekhotel=$this->db->query("SELECT*FROM reservasi_grooming WHERE id_hewan ='".$v->id_hewan."' && status = '1'")->num_rows();
+                 $cekhotel=$this->db->query("SELECT*FROM reservasi_grooming WHERE id_hewan ='".$v->id_hewan."' && status = '0'")->num_rows();
                  if($cekhotel > 0){
                    
-                  $grooming=$this->db->query("SELECT*FROM reservasi_grooming WHERE id_hewan ='".$v->id_hewan."' && status = '1'")->row();
+                  $grooming=$this->db->query("SELECT*FROM reservasi_grooming WHERE id_hewan ='".$v->id_hewan."' && status = '0'")->row();
                       echo "
                       
                       <div class='row'>
@@ -145,7 +145,7 @@
 
             <div class="card">
               <div class="card-header bg-danger">
-                <h2>Data Reservasi Pet</h2>
+                <h2>Data History Reservasi Pet</h2>
               </div>
               <div class="card-body">
                 

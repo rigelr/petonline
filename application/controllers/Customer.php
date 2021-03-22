@@ -19,6 +19,12 @@ $this->load->view('customer/header',$data);
 $this->load->view('customer/dashboard');
 }
 
+public function dashboardhistory(){
+    $data=array('active_dashboard'=>'active','user' => $this->Model_app->getSelectedData('customer','id_customer',$this->session->userdata('id_user'))->row(), );
+    $this->load->view('customer/header',$data);
+    $this->load->view('customer/dashboardhistory');
+    }
+
 public function profil(){
 $data=array('active_profil'=>'active','user' => $this->Model_app->getSelectedData('customer','id_customer',$this->session->userdata('id_user'))->row(), );
 $this->load->view('customer/header',$data);

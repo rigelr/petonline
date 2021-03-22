@@ -41,7 +41,7 @@
 
                       }
 
-                      $hewan=$this->db->query("SELECT*FROM hewan")->result();
+                      $hewan=$this->db->query("SELECT*FROM hewan WHERE  id_customer ='".$this->session->userdata('id_user')."'")->result();
                       foreach ($hewan as $v) {
                         echo "<option value='$v->id_hewan'> $v->nama </option>";
                       }

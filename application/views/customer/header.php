@@ -63,15 +63,16 @@
                 <a style="color:#222;" class="dropdown-item" href="<?=base_url()?>customer/reservasihotel">Reservasi Hotel </a>
                 <a style="color:#222;"  class="dropdown-item" href="<?=base_url()?>customer/reservasigrooming">Reservasi Grooming</a>
                 <a style="color:#222;" class="dropdown-item" href="<?=base_url()?>customer/reservasipet">Reservasi Pet</a>
+                
               </div>
             </li>
-
+            
 
           <!-- <li class="<?php if(isset($active_hotel)){ echo $active_hotel;}?>"><a href="<?=base_url()?>customer/reservasihotel">Hotel</a></li>
           <li class="<?php if(isset($active_grooming)){ echo $active_grooming;}?>"><a href="<?=base_url()?>customer/reservasigrooming">Grooming</a></li>
           <li class="<?php if(isset($active_pet)){ echo $active_pet;}?>"><a href="<?=base_url()?>customer/reservasipet">Pet</a></li> -->
           <li class="<?php if(isset($active_profil)){ echo $active_profil;}?>"><a href="<?=base_url()?>customer/profil">Profil</a></li>
-           
+          <li class="<?php if(isset($active_home)){ echo $active_home;}?>"><a href="<?=base_url()?>customer/dashboardhistory">History</a></li>
           <li class="book-a-table text-center"><a href="<?=base_url()?>customer/logout">Logout Here</a></li>
         </ul>
       </nav><!-- .nav-menu -->
